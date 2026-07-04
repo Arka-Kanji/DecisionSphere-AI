@@ -112,7 +112,7 @@ Deployment
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/DecisionSphere-AI.git
+git clone https://github.com/Arka-Kanji/DecisionSphere-AI
 ```
 
 Install dependencies
@@ -159,22 +159,6 @@ src/
 - Team collaboration
 - Multi-language support
 - API integrations
-
----
-
-## 📷 Screenshots
-
-### Landing Page
-
-Add a screenshot here.
-
-### Executive Report
-
-Add a screenshot here.
-
-### Agent Debate Dashboard
-
-Add a screenshot here.
 
 ---
 
