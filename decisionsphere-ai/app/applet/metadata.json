@@ -1,8 +1,0 @@
-{
-  "name": "DecisionSphere AI",
-  "description": "A Multi-Agent AI Executive Council for High-Stakes Decision Making.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
