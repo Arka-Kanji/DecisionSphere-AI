@@ -33,6 +33,7 @@ export function DebateRoom({ sessionId }: DebateRoomProps) {
         }
         return prev;
       });
+      if (data.type === 'stream_end') { eventSource.close(); return; }
       if (data.type === 'report_generated') {
         setStatus('completed');
         setActiveTab('report');
@@ -40,7 +41,7 @@ export function DebateRoom({ sessionId }: DebateRoomProps) {
     };
     
     eventSource.onerror = () => {
-      setStatus('error');
+      setStatus((prev) => prev === 'completed' ? 'completed' : 'error');
       eventSource.close();
     };
 

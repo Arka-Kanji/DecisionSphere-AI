@@ -19,7 +19,7 @@ const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 export interface DebateEvent {
   id: string;
   timestamp: string;
-  type: 'agent_msg' | 'system' | 'mcp_action' | 'timeline' | 'report_generated' | 'security_check' | 'consensus_update' | 'vote_update';
+  type: 'agent_msg' | 'system' | 'mcp_action' | 'timeline' | 'report_generated' | 'security_check' | 'consensus_update' | 'vote_update' | 'stream_end';
   agent?: string;
   role?: string;
   message?: string;
@@ -216,10 +216,12 @@ app.get('/api/decision/:id/stream', (req, res) => {
 
   session.events.forEach(ev => {
     res.write(`data: ${JSON.stringify(ev)}\n\n`);
+    if (ev.type === 'stream_end') res.end();
   });
 
   const onEvent = (ev: DebateEvent) => {
     res.write(`data: ${JSON.stringify(ev)}\n\n`);
+    if (ev.type === 'stream_end') res.end();
   };
   session.emitter.on('event', onEvent);
 
@@ -490,6 +492,7 @@ Make it look like a McKinsey or BCG report. Use professional formatting, bolding
     emit({ type: 'mcp_action', mcpDetails: { tool: 'GitHub', action: 'Commit', result: 'Committed decision record to corporate repository.' } });
     
     session.status = 'completed';
+    emit({ type: 'stream_end' } as any);
     
   } catch (error: any) {
     console.error(error);

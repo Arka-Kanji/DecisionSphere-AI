@@ -1,187 +1,20 @@
-# 🧠 DecisionSphere AI
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-> A Multi-Agent AI Executive Council for High-Stakes Decision Making.
+# Run and deploy your AI Studio app
 
-![Status](https://img.shields.io/badge/Status-Live-success)
-![Built With](https://img.shields.io/badge/Built%20With-Google%20AI%20Studio-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+This contains everything you need to run your app locally.
 
-## 🌐 Live Demo
+View your app in AI Studio: https://ai.studio/apps/a6e6c6ff-49f5-4060-9d57-474b0d585056
 
-**Application:**  
-https://decisionsphere-ai-386579652777.asia-southeast1.run.app/
+## Run Locally
 
----
+**Prerequisites:**  Node.js
 
-## 📖 Overview
 
-DecisionSphere AI is a multi-agent decision intelligence platform that simulates an executive council of specialized AI agents.
-
-Instead of relying on a single AI response, multiple expert agents independently analyze a strategic problem, debate assumptions, validate evidence, assess risks, challenge conclusions, and finally produce a unified executive recommendation.
-
-The goal is to improve transparency, robustness, and confidence in complex business and strategic decisions.
-
----
-
-## ✨ Features
-
-- 🤖 Multi-Agent AI Council
-- 📊 Executive Decision Reports
-- 🔍 Independent Evidence Verification
-- 🛡️ Red Team Challenge Analysis
-- ⚠️ Risk Assessment
-- 📈 Confidence Scoring
-- 🗳️ Final Council Voting
-- 📑 Downloadable Executive Report
-- 💻 Modern Interactive Dashboard
-- 🔒 Built-in Security Validation
-
----
-
-## 🏛️ AI Council Members
-
-The council consists of specialized AI agents:
-
-- Research Agent
-- Finance Agent
-- Risk Analyst
-- Domain Expert
-- Evidence Verification Agent
-- Red Team Agent
-- Consensus Agent
-
-Each agent contributes an independent perspective before the council reaches a final recommendation.
-
----
-
-## 🔄 Decision Workflow
-
-1. User submits a strategic decision.
-2. AI Council convenes.
-3. Research Agent gathers evidence.
-4. Finance Agent evaluates ROI and feasibility.
-5. Risk Agent identifies operational risks.
-6. Domain Expert provides subject expertise.
-7. Evidence Verification validates supporting claims.
-8. Red Team challenges assumptions.
-9. Consensus Agent combines all viewpoints.
-10. Executive Report is generated.
-
----
-
-## 📊 Example Decision
-
-> Should our B2B SaaS startup expand into Singapore or Indonesia first with an $8M expansion budget?
-
-DecisionSphere AI evaluates:
-
-- Market Size
-- Operating Costs
-- Hiring Availability
-- Competition
-- Regulatory Environment
-- Expected ROI
-- Strategic Value
-- Geopolitical Stability
-
-before generating a final executive recommendation.
-
----
-
-## 🛠️ Tech Stack
-
-Frontend
-
-- React
-- TypeScript
-- Vite
-
-AI
-
-- Google AI Studio
-- Gemini
-
-Deployment
-
-- Google Cloud Run
-
----
-
-## 🚀 Running Locally
-
-Clone the repository
-
-```bash
-git clone https://github.com/Arka-Kanji/DecisionSphere-AI
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Run development server
-
-```bash
-npm run dev
-```
-
-Build
-
-```bash
-npm run build
-```
-
----
-
-## 📁 Project Structure
-
-```
-src/
- ├── components/
- ├── pages/
- ├── hooks/
- ├── services/
- ├── assets/
- └── App.tsx
-```
-
----
-
-## 🎯 Future Improvements
-
-- Real-time web evidence retrieval
-- Custom AI agent creation
-- Industry-specific councils
-- PDF report export
-- Historical decision archive
-- Team collaboration
-- Multi-language support
-- API integrations
-
----
-
-## 💡 Motivation
-
-Complex strategic decisions often require expertise from multiple domains.
-
-DecisionSphere AI demonstrates how a council of specialized AI agents can collaboratively evaluate opportunities, challenge assumptions, quantify uncertainty, and provide transparent executive recommendations instead of relying on a single AI response.
-
----
-
-## 📌 Live Demo
-
-https://decisionsphere-ai-386579652777.asia-southeast1.run.app/
-
----
-
-## 👨‍💻 Author
-
-Built for the **Kaggle Vibe Coding Agents Capstone Project**.
-
----
-
-## 📄 License
-
-MIT License
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
